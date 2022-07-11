@@ -11,7 +11,7 @@ def copy_data():
     """
     con = conexion()
     cursor = con.cursor()
-    with open('part_1_sql/sql/copy_data.sql', 'r', encoding='utf-8') as table:
+    with open('part_1_sql/sql/copy_data.sql', 'r+', encoding='utf-8') as table:
         data = table.read()
         cursor.execute(data)
         con.commit()
